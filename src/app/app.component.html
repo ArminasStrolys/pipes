@@ -52,6 +52,23 @@
       {{amount | currency}}
     </div>
   </div>
+  <!-- //---------- ------------------------------------------->
+  <div class="grid-1">
+    <label>Miles:
+      <input (input)="onMilesChange($event)" type="number">
+    </label>
+  </div>
+
+  <div class="grid-2">
+    <label>
+      <b>
+        Kilometres
+      </b>
+    </label>
+    <div *ngIf="(miles | convert: 'km') > 10">
+      {{miles | convert: 'km' | number: '1.0-2'}}
+    </div>
+  </div>
 </div>
 
 <!-- {{tester | json}} -->

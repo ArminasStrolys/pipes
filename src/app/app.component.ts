@@ -9,6 +9,7 @@ export class AppComponent {
   name!: string;
   date!: string;
   amount!: number;
+  miles!: number;
 
   tester = {
     test1: 'TTT',
@@ -27,5 +28,9 @@ export class AppComponent {
   onAmountChange(value: Event) {
     const target = value.target as HTMLInputElement;
     this.amount = +target.value;
+  }
+  onMilesChange(value: Event) {
+    const target = value.target as HTMLInputElement;
+    this.miles = +target.value;
   }
 }
