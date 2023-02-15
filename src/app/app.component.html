@@ -1,1 +1,57 @@
 <h1>PIPES</h1>
+
+<div class="container">
+  <h1>PayMe Form</h1>
+  <div class="grid-1">
+    <label>Acc. holder's name:
+      <input (input)="onNameChange($event)" type="text">
+    </label>
+  </div>
+
+  <div class="grid-2">
+    <label>
+      <b>
+        Name
+      </b>
+    </label>
+    <div>
+      {{name | titlecase}}
+    </div>
+  </div>
+  <!-- //---------- ------------------------------------------->
+  <div class="grid-1">
+    <label>Payment date:
+      <input (input)="onDateChange($event)" type="date">
+    </label>
+  </div>
+
+  <div class="grid-2">
+    <label>
+      <b>
+        Payment date
+      </b>
+    </label>
+    <div>
+      {{date | date: 'long'}}
+    </div>
+  </div>
+  <!-- //---------- ------------------------------------------->
+  <div class="grid-1">
+    <label>Money:
+      <input (input)="onAmountChange($event)" type="number">
+    </label>
+  </div>
+
+  <div class="grid-2">
+    <label>
+      <b>
+        Amount $
+      </b>
+    </label>
+    <div>
+      {{amount | currency}}
+    </div>
+  </div>
+</div>
+
+<!-- {{tester | json}} -->

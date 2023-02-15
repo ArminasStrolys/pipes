@@ -1,0 +1,28 @@
+.container {
+  border: 1px solid coral;
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+h1 {
+  grid-column: 1 / -1;
+  color: cornflowerblue;
+}
+
+.grid-1 {
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+
+.grid-2 {
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
